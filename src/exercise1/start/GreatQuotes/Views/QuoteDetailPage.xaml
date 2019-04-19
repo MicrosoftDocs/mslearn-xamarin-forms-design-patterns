@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="GreatQuotes.Views.QuoteDetailPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+                ios:Page.UseSafeArea="true"
+             Title="Great Quote">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Icon="ic_edit.png" Text="Edit" Priority="0" Clicked="Handle_ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <Grid Padding="5,10,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Text="{Binding Author}" 
+               VerticalOptions="Start" 
+               HorizontalTextAlignment="Center"
+               Style="{DynamicResource TitleStyle}"/>
+        <Label Grid.Row="1" Text="{Binding QuoteText}" 
+               VerticalOptions="Start"
+               Style="{DynamicResource BodyStyle}"/>
+        <Button Grid.Row="2" Text="Close" 
+                BackgroundColor="Green" 
+                TextColor="White" 
+                VerticalOptions="EndAndExpand"
+                Clicked="Handle_Clicked"/>
+    </Grid>
+    
+</ContentPage>

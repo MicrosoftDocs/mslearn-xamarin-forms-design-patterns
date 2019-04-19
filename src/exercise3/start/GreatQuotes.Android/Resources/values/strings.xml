@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Great Quotes</string>
+	<string name="edit_quote">Edit Quote</string>
+</resources>

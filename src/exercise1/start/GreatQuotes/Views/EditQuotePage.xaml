@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="GreatQuotes.Views.EditQuotePage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+                ios:Page.UseSafeArea="true"
+             Title="Edit a Great Quote">
+    <ScrollView>
+        <Grid Padding="5,10,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="40"/>
+
+            </Grid.RowDefinitions>
+            
+            <Entry Grid.Row="0" Text="{Binding Author}" 
+                   VerticalOptions="Start" 
+                   HorizontalTextAlignment="Center"/>
+            <Editor Grid.Row="1" Text="{Binding QuoteText}" 
+                   VerticalOptions="Start">
+                <Editor.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="#a4eaff" />
+                        <On Platform="Android, UWP" Value="#2c3e50" />
+                    </OnPlatform>
+                </Editor.BackgroundColor>
+            </Editor>
+            <Button Grid.Row="2" Text="Close" 
+                    BackgroundColor="Green" 
+                    TextColor="White" 
+                    VerticalOptions="Start"
+                    Clicked="Handle_Clicked"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>
