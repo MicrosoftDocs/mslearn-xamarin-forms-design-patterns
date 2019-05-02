@@ -37,20 +37,5 @@ namespace GreatQuotes.iOS {
             return base.FinishedLaunching(uiApplication, launchOptions);
         }
 
-        //public override async void DidEnterBackground(UIApplication uiApplication) {
-        //    CancellationTokenSource cts = new CancellationTokenSource();
-
-        //    var taskId = UIApplication.SharedApplication.BeginBackgroundTask(() => cts.Cancel());
-
-        //    try {
-        //        await Task.Run(() => {
-        //            GreatQuotesViewModel.SaveQuotes();
-        //        }, cts.Token);
-        //    } catch (Exception ex) {
-        //        Debug.WriteLine(ex.Message);
-        //    } finally {
-        //        UIApplication.SharedApplication.EndBackgroundTask(taskId);
-        //    }
-        //}
     }
 }
