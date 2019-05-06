@@ -1,7 +1,6 @@
 # Microsoft Learn: Explore cross platform design patterns
 
-[//]: # (TODO: Link back to Microsoft Learn module.)
-This project contains the source code for the **Explore cross platform design patterns** Microsoft Learn module.
+This project contains the source code for the [**Explore cross-platform design patterns for Xamarin apps**](https://docs.microsoft.com/learn/modules/explore-cross-platform-design-patterns/) Microsoft Learn module.
 
 # Contributing
 
